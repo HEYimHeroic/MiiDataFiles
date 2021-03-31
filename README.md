@@ -25,13 +25,15 @@ storing every single Mii data file that is available for download on the Mii Lib
 
 ## Switch formats
 
-* NFSD
+* NFSD (SwitchDB)
    * This format is seen to store SwitchDB-format Mii data files. The Nintendo Switch's Mii database file stored in NAND uses a different Mii format than those seen in Switch games. Thus, this format stores the former. This format actually stores two checksums. The first checksum is of the Mii data itself. The second one is of the Switch's console ID, meaning it should be the same across all Miis made on the same system. A tool named RSDmakerNXDB is being developed, but isn't currently ready, as there are more intricacies that need to be looked into. [Genwald](https://github.com/Genwald) is currently helping with this. The NFSD format is the most compact Mii data file format, looking at an "amount of data stored" to "filesize" ratio.
    * The name NFSD is not official. There is currently no official file extension for this format. NFSD was a name created by myself, HEYimHeroic, and it stands for **N**X **F**ace **S**tore **D**ata.
+      * There is somewhat of an official name, however. Internally, this format has been associated with "db" in examples such as "NFDB" and "sampledb" - this does not mean anything for the file extension. It does, however, mean that the name "SwitchDB" for the format might be pretty close to what it's actually called.
 
-* UFSD
+* UFSD (charinfo)
    * This format is seen to store Switch-format Mii data files. The Nintendo Switch's Mii database file stored in NAND uses a different Mii format than those seen in Switch games. Thus, this format stores the latter. This format stores no checksums. The format appears to follow a similar structure to the NFSD format, while still separating its values into separate bytes, similar to the MNMS format.
    * Despite being the one used in game files, it's never recieved an official file extension, either. Most games store them inside other larger files that are also storing other information, with other extensions. Super Smash Bros. Ultimate uses a generic .bin extension for some files, and no extension at all for others. Originally, it was believed Super Smash Bros. Ultimate was the only game to use the UFSD format, so at the time, it was named **U**ltimate **F**ace **S**tore **D**ata, and was referred to as the Ultimate-format. Of course, we now know all Switch games use it, and it has since been renamed to the Switch-format, but there's no reason to change the file extension, unless an official one is found.
+      * There is somewhat of an official name, however. Internally, this format may be referred to as "charinfo" - this however does not mean anything for the file extension.
 
 * MNMS
    * This format is only seen in a browser's Local Storage on Nintendo's official online Mii Studio website. If a change is made, the browser stores the Mii data in Local Storage, so if the user closes the window or refreshes, the site will be able to restore the changes the user was working on. However, we can use this to our advantage. A tool named the [Mii Studio Mii Loader](https://github.com/HEYimHeroic/MiiStudioMiiLoader) was written by myself, HEYimHeroic. It allows downloading and setting the browser's Local Storage at will, meaning we can import and export Miis via a string of HEX values. This string can be stored in a simple text file, or it can be saved directly to a file.
