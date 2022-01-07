@@ -1,5 +1,5 @@
 # MiiDataFiles
-storing every single Mii data file that is available for download on the Mii Library. https://sites.google.com/view/miilibrary/home
+storing every single Mii data file that is available for download on the Mii Library. https://www.miilibrary.com/
 
 # Types
 
